@@ -1,0 +1,31 @@
+from tkinter import *
+
+window = Tk()
+window.geometry("400x400")
+
+
+
+
+mainpage = Frame(window)
+chord_tab = Frame(window)
+
+
+def swap(frame):
+    frame.tkraise() 
+
+
+for frame in (mainpage, chord_tab): 
+    frame.grid(row=0, column=0)
+
+Label(mainpage, text= "Welcome! Please select a tab:")
+Button(mainpage, text="Chords", command= lambda: swap(chord_tab) ).pack()
+
+
+Button(chord_tab, text="Exit", command= lambda:swap(mainpage) ).pack()
+
+
+
+
+
+mainpage.tkraise()
+window.mainloop()
