@@ -4,7 +4,7 @@ from PIL import ImageTk, Image
 window = Tk()
 window.geometry("400x400")
 window.title("Guitar Trainerator 2000")
-welcome = Label(window, text="Welcome! Please select a tab:").grid(row=0, column=0, columnspan=5)
+welcome = Label(window, text="Welcome! Please select a tab:").grid(row=1, column=0, columnspan=5)
 
 mainpage = Frame(window)
 chords_tab =Frame(window)
@@ -20,13 +20,13 @@ def swap(frame):
 
 
 for frame in (mainpage, chords_tab, tuner_tab, trainer_tab, progress_tab): 
-    frame.grid(row=0, column=0)
+    frame.grid(row=2, column=0)
 
-Button(mainpage, text="Chords", command= lambda: swap(chords_tab)).grid(row=1, column=1)
-Button(mainpage, text="Tuner",command= lambda: swap(tuner_tab)).grid(row=1, column=2)
-Button(mainpage, text="Trainer",  command= lambda: swap(trainer_tab)).grid(row=1, column=3)
-Button(mainpage, text="Progress", command= lambda: swap(progress_tab)).grid(row=1, column=4)
-Button(mainpage, text="Exit", command= window.quit).grid(row=1, column=5)
+Button(mainpage, text="Chords", command= lambda: swap(chords_tab)).grid(row=2, column=1)
+Button(mainpage, text="Tuner",command= lambda: swap(tuner_tab)).grid(row=2, column=2)
+Button(mainpage, text="Trainer",  command= lambda: swap(trainer_tab)).grid(row=2, column=3)
+Button(mainpage, text="Progress", command= lambda: swap(progress_tab)).grid(row=2, column=4)
+Button(mainpage, text="Exit", command= window.quit).grid(row=2, column=5)
 
 
 
